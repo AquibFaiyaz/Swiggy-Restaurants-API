@@ -31,7 +31,6 @@ const getAllRestaurants = (request, response) => {
         total_items_count: results[0].rows[0].count,
         value: results[1].rows,
       });
-      //   response.status(200).json(results.rows[0]);
     }
   );
 };
