@@ -15,7 +15,9 @@ app.use(
 );
 
 app.get("/", (request, response) => {
-  response.json({ info: "Node.js, Express, and Postgres API" });
+  response.json({
+    info: "This repository is intended for APIs designed to serve Swiggy restaurant data from major Indian metro cities.",
+  });
 });
 
 app.get("/cities", db.getAllCities);
