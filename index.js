@@ -5,7 +5,7 @@ const app = express();
 const db = require("./queries");
 require("dotenv").config();
 
-const port = process.env.PORT | 3000;
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(
