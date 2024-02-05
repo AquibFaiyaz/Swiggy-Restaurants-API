@@ -14,15 +14,15 @@ app.use(
   })
 );
 
-app.get("/", (request, response) => {
+app.get("/api/v1.1", (request, response) => {
   response.json({
     info: "This repository is intended for APIs designed to serve Swiggy restaurant data from major Indian metro cities.",
   });
 });
 
-app.get("/cities", db.getAllCities);
-app.get("/restaurants", db.getAllRestaurants);
-app.get("/restaurants/:id", db.getRestaurantById);
+app.get("/api/v1.1/cities", db.getAllCities);
+app.get("/api/v1.1/restaurants", db.getAllRestaurants);
+app.get("/api/v1.1/restaurants/:id", db.getRestaurantById);
 
 app.listen(port, () => {
   console.log(`App running on port ${port}.`);
